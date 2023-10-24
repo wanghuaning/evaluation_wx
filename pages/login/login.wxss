@@ -1,0 +1,43 @@
+/* pages/login/login.wxss */
+
+/* pages/login/login.wxss */
+page {
+    width: 100%;
+    height: 100%;
+ }
+ .td-input-bg-color{
+   background-color: #f5f4f4 !important
+ }
+ 
+ .inputClass{
+   margin-bottom: 20rpx;
+ }
+ 
+ .imagelogo{
+   width: 100%;
+   text-align: center;
+ }
+ 
+ .main {
+   width: 100%;
+   box-sizing: border-box;
+   padding-left: 32rpx;
+   padding-right: 32rpx;
+   padding-top: 100rpx;
+   padding-bottom: 240rpx;
+ }
+ 
+ .buttonClass {
+   margin-top: 42rpx;
+   height: 90rpx !important;
+   border: none !important;
+   background-color: #3bb6ed !important
+ }
+ 
+ .P_class{
+   width: 100%;
+   text-align: center;
+   color:#3bb6ed;
+   margin-bottom: 20rpx;
+   font-size: 25px;
+ }

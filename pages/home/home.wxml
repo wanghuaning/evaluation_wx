@@ -1,0 +1,52 @@
+<!--pages/home/home.wxml-->
+<view>
+  <vie class="imageView">
+    <image src=""></image>
+  </vie>
+  <view class="main">
+      <view class="pullDownList">
+        <view class="switchBox">
+          <view class="title">登录用户信息</view>
+          <t-divider></t-divider>
+          <view class="name">用户名:{{userInfor.userName }}</view>
+          <view class="lastname">单位名称:{{ userInfor.unitName }}</view>
+        </view>
+      </view>
+
+      <view class="pullDown" >
+         <view class="switchBox" bind:tap="toSelfSummary">
+         <view class="name">自我总结</view>
+         <t-icon name="arrow-right" size="48rpx" color="#A6A6A6" t-class="icon" />
+         </view>
+      </view>
+
+      <view class="pullDown" >
+         <view class="switchBox" bind:tap="toEvaluationPeople">
+         <view class="name">待考核人员</view>
+         <t-icon name="arrow-right" size="48rpx" color="#A6A6A6" t-class="icon" />
+         </view>
+      </view>
+
+      <view class="pullDown" >
+         <view class="switchBox" bind:tap="toAlreadyEvaluationPeople">
+         <view class="name">已考核人员</view>
+         <t-icon name="arrow-right" size="48rpx" color="#A6A6A6" t-class="icon" />
+         </view>
+      </view>
+
+
+      <view class="pullDown" >
+         <view class="switchBox" bind:tap="toUpdatePassword">
+         <view class="name">修改密码</view>
+         <t-icon name="arrow-right" size="48rpx" color="#A6A6A6" t-class="icon" />
+         </view>
+      </view>
+
+      <view class="pullDown">
+         <view class="switchBox" catch:tap="lognOut">
+         <view class="name">退出登录</view>
+         <t-icon name="user-clear" size="48rpx" color="#A6A6A6" t-class="icon" />
+         </view>
+      </view>
+  </view>
+</view>

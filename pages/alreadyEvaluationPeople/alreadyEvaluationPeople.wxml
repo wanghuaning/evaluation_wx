@@ -1,0 +1,35 @@
+<!--pages/alreadyEvaluationPeople/alreadyEvaluationPeople.wxml-->
+<view>
+  <t-sticky>
+  <t-navbar title="已考核人员列表"leftIcon="chevron-left" bind:go-back="onReturn" background="red" t-class-left-icon="left-icon-back"
+  t-class-home-icon="home-icon"
+  t-class-title="nav-title"
+/>
+<view class="searchView">
+    <t-search t-class-cancel="t-class-cancel" model:value="{{value}}" placeholder="请输入名称"  bind:submit="submit" center="{{true}}" />
+  </view>
+</t-sticky>
+
+<t-toast id="t-toast" />
+<t-message id="t-message" />
+
+<t-empty t-class="empty-cls" wx:if="{{isEempty}}" icon="info-circle-filled" description="无已考核人员" />
+<view wx:else="{{isEempty}}">
+  <view class="pullDown">
+  <view class="switchBox">
+    <view class="child"   wx:for="{{userInfors}}" wx:key="name" data-item="{{item}}" >
+      <view class="name" >考核人员姓名：{{item.userName}}</view>
+      <view class="name">职务：{{item.position==null?'':item.position}}</view>
+      <view class="name">单位名称：{{item.unitName}}</view>
+       <form bindsubmit='formSubmit'>
+        <t-input t-class="inputHidden" hidden="true" value="{{item.id}}" name="userId"> </t-input>
+        <t-input t-class="inputHidden" hidden="true" value="{{item.userName}}" name="userName"> </t-input>
+        <t-input t-class="inputHidden" hidden="true" value="{{item.byEvaluationUserId}}" name="byEvaluationUserId"> </t-input>
+        <t-button t-class="verify" theme="primary" variant="outline" block type="submit">修改考核</t-button>
+      </form>
+      <view style="height: 5rpx;width: 100%;"></view>
+    </view>
+  </view>  
+  </view>
+</view>
+</view>

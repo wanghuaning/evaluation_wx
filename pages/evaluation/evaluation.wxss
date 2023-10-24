@@ -1,0 +1,106 @@
+/* pages/evaluation/evaluation.wxss */
+
+.left-icon-back {
+    color: #ffffff;
+    font-size: 48rpx !important;
+  }
+  
+  .home-icon {
+    color: #ffffff;
+    font-size: 48rpx !important;
+  }
+  
+  .nav-title {
+    color: #ffffff;
+    font-size: 32rpx !important;
+  }
+  
+  
+  .pullDown {
+    width: 95%;
+    box-sizing: border-box;
+    border-radius: 8rpx;
+    margin-bottom: 24rpx;
+    margin: 0 auto;
+  }
+  
+  .pullDown .switchBox {
+    font-size: 32rpx;
+    line-height: 48rpx;
+    color: #333;
+  }
+  
+  
+  .pullDown .switchBox .child {
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #e5e5e5;
+    align-items: center;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    opacity: 0.9;
+  }
+  .pullDown .switchBox .child:last-of-type {
+    border-bottom-color: transparent;
+  }
+  
+  .pullDown .switchBox .child .name{
+    padding-top: 10rpx;
+    padding-bottom: 5rpx;
+  }
+  
+  .external-class {
+    color: #ffffff !important;
+    background-color: #0f62c2 !important;
+  }
+  
+  .indicator-blue {
+    color: #0052d9;
+  }
+  
+  .error-msg {
+    text-align: right !important;
+  }
+  
+  .verify {
+    color: rgba(0, 82, 217, 1);
+    font-size: 32rpx;
+  }
+  
+  .inputHidden{
+    display:none !important
+  }
+  
+  .empty-cls{
+    margin-top: 200rpx;
+    text-align: center;
+    color: rgb(202, 201, 200);
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .collapse-content-item {
+    margin: 16rpx 0;
+  }
+  .collapse-content-item-title {
+    width: 176rpx;
+    display: inline-flex;
+    font-size: 28rpx;
+    color: #666;
+  }
+  .collapse-content-item-val {
+    display: inline-flex;
+    justify-content: right;
+    font-size: 28rpx;
+    color: #333;
+    align-items: center;
+  }
+
+  .box {
+    padding: 32rpx;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+  }

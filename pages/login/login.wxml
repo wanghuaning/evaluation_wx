@@ -1,0 +1,29 @@
+<!--pages/login/login.wxml-->
+<view class="main">
+  <t-toast id="t-toast" />
+  <t-message id="t-message" />
+  <view class="imagelogo">
+      <image src="/image/logo.png" style="width:470rpx;height:400rpx"></image>
+      
+  </view>
+  <view class="P_class" >
+    <p>干部平时考核</p>
+  </view>
+  <view>
+     <form  bindsubmit='formSubmit'>
+      <view class="inputClass">
+       <t-input value="{{username}}" name="userName" t-class="td-input-bg-color"  placeholder="请输入用户姓名" />
+      </view>
+      <view class="inputClass">
+       <t-input value="{{password}}" name="phoneNumber" t-class="td-input-bg-color" placeholder="请输入电话号码"/>
+      </view>
+      <view class="inputClass">
+       <t-input value="{{password1}}" name="password" t-class="td-input-bg-color" placeholder="请输入密码"/>
+      </view>
+      <view>
+        <t-button t-class="buttonClass" theme="primary" block loading="{{loading}}" type="submit">登  录</t-button>
+      </view>
+     </form>
+  </view>
+
+</view>

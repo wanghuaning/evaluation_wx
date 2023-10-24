@@ -1,0 +1,32 @@
+<!--pages/evaluationPeople/evaluationPeople.wxml-->
+<view>
+  <t-sticky>
+  <t-navbar title="考核人员列表"leftIcon="chevron-left" bind:go-back="onReturn" background="red" t-class-left-icon="left-icon-back"
+  t-class-home-icon="home-icon"
+  t-class-title="nav-title"
+/>
+<t-notice-bar theme="warning" visible="{{true}}"  marquee="{{true}}" content="请在规定时间内对未考核考评人员进行考核，超过规定时间系统会关闭此功能，请尽快考评未考核人员！"></t-notice-bar>
+</t-sticky>
+
+<t-toast id="t-toast" />
+<t-message id="t-message" />
+
+<t-empty t-class="empty-cls" wx:if="{{isEempty}}" icon="info-circle-filled" description="无需要考核人员" />
+<view wx:else="{{isEempty}}">
+  <view class="pullDown">
+  <view class="switchBox">
+    <view class="child"   wx:for="{{userInfors}}" wx:key="name" data-item="{{item}}" >
+      <view class="name" >考核人员姓名：{{item.userName}}</view>
+      <view class="name">职务：{{item.position==null?'':item.position}}</view>
+      <view class="name">单位名称：{{item.unitName}}</view>
+       <form bindsubmit='formSubmit'>
+        <t-input t-class="inputHidden" hidden="true" value="{{item.id}}" name="userId"> </t-input>
+        <t-input t-class="inputHidden" hidden="true" value="{{item.userName}}" name="userName"> </t-input>
+        <t-button t-class="verify" theme="primary" variant="outline" block type="submit">考核</t-button>
+      </form>
+      <view style="height: 5rpx;width: 100%;"></view>
+    </view>
+  </view>  
+  </view>
+</view>
+</view>

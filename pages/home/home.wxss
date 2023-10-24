@@ -1,0 +1,75 @@
+/* pages/home/home.wxss */
+page{
+    background-color: rgb(241, 241, 241);
+  }
+  
+  .imageView{
+    width: 100%;
+    height: 400rxp;
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    background-color: #3bb6ed;
+    border-bottom-left-radius: 80rpx;
+    border-bottom-right-radius: 80rpx;
+  }
+  
+  .main {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .pullDownList {
+    width: 85%;
+    background-color: #fff;
+    border-radius: 15rpx;
+    padding-left: 40prx;
+    margin: 0 auto;
+    margin-top:  350rpx;
+  }
+  
+  .pullDownList .switchBox {
+    padding: 0 32rpx;
+    font-size: 32rpx;
+    line-height: 48rpx;
+    color: #333;
+  }
+  
+  .pullDownList .switchBox .name{
+    text-align: left;
+    margin-top: 10rpx;
+    margin-bottom: 20rpx;
+  }
+  
+  .pullDownList .switchBox .lastname{
+    text-align: left;
+    padding-bottom: 20rpx;
+  }
+  .pullDownList .switchBox .title{
+     text-align: left;
+     padding-top: 15rpx;
+     padding-bottom: 15rpx;
+  }
+  
+  
+  .pullDown {
+    width: 85%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 8rpx;
+    margin-bottom: 24rpx;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 24rpx;
+    margin-bottom: 24rpx;
+  }
+  .pullDown .switchBox {
+    height: 120rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32rpx;
+    font-size: 32rpx;
+    line-height: 48rpx;
+    color: #333;
+  }

@@ -1,0 +1,84 @@
+<!--pages/evaluation/evaluation.wxml-->
+<view>
+  <t-sticky>
+  <t-navbar title="考核修改"leftIcon="chevron-left" bind:go-back="onReturn" background="red" t-class-left-icon="left-icon-back"
+  t-class-home-icon="home-icon"
+  t-class-title="nav-title"/>
+ </t-sticky>
+
+<t-toast id="t-toast" />
+<t-message id="t-message" />
+
+<t-empty t-class="empty-cls" wx:if="{{isEempty}}" icon="info-circle-filled" description="已经考核人员数据错误" />
+  <view wx:else="{{isEempty}}">
+    <view class="pullDown">
+        <view class="switchBox">
+            <view class="child" >
+                <view class="name" style="color: black;margin-bottom: 10rpx;" >考评人员姓名：{{userName}}</view>
+              
+                <view style="color: black;margin-bottom: 10rpx;margin-top: 10rpx;">
+                   <view>被评价人自我总结：</view>
+                  <t-textarea name="selfSummary" value="{{selfSummary}}" placeholder="自我总结"  disabled="true"/>
+                </view>
+                <view class="name" style="color: black;margin-bottom: 10rpx;margin-top: 5rpx;" >一、工作实绩占60%</view>
+            </view>
+
+            <form bindsubmit='formSubmit'>
+                <view class="child" >
+                   <view class="name" >1、工作数量（0-10分）。考核公务员当期完成本职工作任务的数量。</view>
+                   <t-input  placeholder="请输入评价分数 0-10分" value="{{examineInfo.quantity}}" name="quantity" > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >2、工作质量（0-10分）。考核公务员当期完成本职工作任务的质量。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" value="{{examineInfo.quality}}" name="quality"   > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >3、工作效率（0-10分）。考核公务员当期完成本职工作任务的效率，主要考核工作速度、工作成本等。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" value="{{examineInfo.efficiency}}" name="efficiency"   > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >4、工作贡献（0-10分）。考核公务员当期完成本职工作任务的贡献度，主要考核工作结果所产生的效益。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" value="{{examineInfo.contribution}}" name="contribution"   > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" style="color: black;margin-bottom: 10rpx;margin-top: 5rpx;"  >二、工作作风占40%</view>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >1、工作纪律（0-10分）。考核公务员当期遵守工作纪律的情况，主要考核上下班、出勤率和在岗情况等。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" value="{{examineInfo.discipline}}" name="discipline"   > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >2、工作态度（0-10分）。考核公务员当期完成本职工作任务的态度，主要考核是否态度端正、服从安排、忠于职守。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" value="{{examineInfo.attitude}}" name="attitude"   > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >3、敬业精神（0-10分）。考核公务员当期完成本职工作任务的努力程度和辛苦程度。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" value="{{examineInfo.professionalism}}" name="professionalism" > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name"  style="color: black;margin-bottom: 10rpx;margin-top: 5rpx;" >公务员平时考核结果:</view>
+                   <t-radio-group  bind:change="handleChange" value="{{result}}" options="{{options}}"/>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name"  style="color: black;margin-bottom: 10rpx;margin-top: 5rpx;" >考核意见:</view>
+                   <t-textarea  name="opinion" value="{{examineInfo.opinion}}" placeholder="考核意见" />
+                 </view>
+                 <t-input t-class="inputHidden" hidden="true" value="{{examineInfo.id}}" name="id"> </t-input>
+                <t-button style="margin-top: 10rpx;" t-class="verify" theme="primary" variant="outline" block type="submit">修改</t-button>
+            </form>
+            <view style="width: 100%; height: 40rpx;"></view>
+        </view>  
+    </view>
+
+  </view>
+
+</view>

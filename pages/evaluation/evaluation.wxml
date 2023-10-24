@@ -1,0 +1,86 @@
+<!--pages/evaluation/evaluation.wxml-->
+<view>
+  <t-sticky>
+  <t-navbar title="考核填写"leftIcon="chevron-left" bind:go-back="onReturn" background="red"t-class-left-icon="left-icon-back"
+  t-class-home-icon="home-icon"
+  t-class-title="nav-title"/>
+ </t-sticky>
+
+<t-toast id="t-toast" />
+<t-message id="t-message" />
+  <view>
+    <view class="pullDown">
+        <view class="switchBox">
+            <view class="child" >
+                <view class="name" style="color: black;margin-bottom: 10rpx;" >考评人员姓名：{{userName}}</view>
+                <view style="color: black;margin-bottom: 10rpx;margin-top: 10rpx;">
+                   <view>被评价人自我总结：</view>
+                  <t-textarea  name="selfSummary" value="{{selfSummary}}" placeholder="自我总结"  disabled="true" />
+                </view>
+                <view class="name" style="color: black;margin-bottom: 10rpx;margin-top: 5rpx;" >一、工作实绩占60%</view>
+            </view>
+
+            <form bindsubmit='formSubmit'>
+                <view class="child" >
+                   <view class="name" >1、工作数量（0-10分）。考核公务员当期完成本职工作任务的数量。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" name="quantity" > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >2、工作质量（0-10分）。考核公务员当期完成本职工作任务的质量。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" name="quality"   > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >3、工作效率（0-10分）。考核公务员当期完成本职工作任务的效率，主要考核工作速度、工作成本等。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" name="efficiency"   > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >4、工作贡献（0-10分）。考核公务员当期完成本职工作任务的贡献度，主要考核工作结果所产生的效益。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" name="contribution"   > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" style="color: black;margin-bottom: 10rpx;margin-top: 5rpx;"  >二、工作作风占40%</view>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >1、工作纪律（0-10分）。考核公务员当期遵守工作纪律的情况，主要考核上下班、出勤率和在岗情况等。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" name="discipline"   > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >2、工作态度（0-10分）。考核公务员当期完成本职工作任务的态度，主要考核是否态度端正、服从安排、忠于职守。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" name="attitude"   > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name" >3、敬业精神（0-10分）。考核公务员当期完成本职工作任务的努力程度和辛苦程度。</view>
+                   <t-input placeholder="请输入评价分数 0-10分" name="professionalism" > </t-input>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name"  style="color: black;margin-bottom: 10rpx;margin-top: 5rpx;" >公务员平时考核结果:</view>
+                   <t-radio-group  bind:change="handleChange" default-value="1" borderless  >
+                      <t-radio  label="好" value="1" />
+                      <t-radio  label="较好" value="2" />
+                      <t-radio  label="一般" value="3" />
+                      <t-radio  label="较差" value="4" />
+                   </t-radio-group>
+                 </view>
+
+                 <view class="child" >
+                   <view class="name"  style="color: black;margin-bottom: 10rpx;margin-top: 5rpx;" >考核意见:</view>
+    
+                   <t-textarea  name="opinion" placeholder="考核意见" />
+                 </view>
+                <t-button style="margin-top: 10rpx;" t-class="verify" theme="primary" variant="outline" block type="submit">提交</t-button>
+            </form>
+            <view style="width: 100%; height: 40rpx;"></view>
+        </view>  
+    </view>
+
+  </view>
+
+</view>

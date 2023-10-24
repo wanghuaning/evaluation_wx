@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "t-navbar": "tdesign-miniprogram/navbar/navbar",
+    "t-notice-bar": "tdesign-miniprogram/notice-bar/notice-bar",
+    "t-sticky": "tdesign-miniprogram/sticky/sticky",
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-empty": "tdesign-miniprogram/empty/empty",
+    "t-overlay": "tdesign-miniprogram/overlay/overlay",
+    "t-collapse": "tdesign-miniprogram/collapse/collapse",
+    "t-collapse-panel": "tdesign-miniprogram/collapse/collapse-panel",
+    "t-search": "tdesign-miniprogram/search/search",
+    "t-textarea": "tdesign-miniprogram/textarea/textarea"
+  },
+  "navigationStyle": "custom"
+}

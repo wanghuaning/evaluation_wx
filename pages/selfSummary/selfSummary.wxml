@@ -1,0 +1,20 @@
+<!--pages/selfSummary/selfSummary.wxml-->
+<!--pages/updatePassword/updatePassword.wxml-->
+<view>
+  <t-toast id="t-toast" />
+  <t-message id="t-message" />
+  <t-sticky>
+  <t-navbar title="自我总结"leftIcon="chevron-left" bind:go-back="onGoHome" background="#3bb6ed" t-class-left-icon="left-icon-back"
+  t-class-home-icon="home-icon"
+  t-class-title="nav-title"
+/>
+</t-sticky>
+</view>
+<view style="margin-top: 50rpx; text-align: center;">
+  <form  bindsubmit='formSubmit'>
+    <t-textarea value="{{userInfor.selfSummary}}"  name="selfSummary" placeholder="自我总结此处只能输入135个中文" />
+      <view>
+        <t-button t-class="buttonClass" theme="primary" block loading="{{loading}}" type="submit">保 存</t-button>
+      </view>
+     </form>
+</view>
